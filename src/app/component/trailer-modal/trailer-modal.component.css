@@ -1,0 +1,63 @@
+/* Modal Overlay (Background) */
+.modal-overlay {
+  position: fixed;      /* Ensures the modal stays on top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;        /* Full screen height */
+  background-color: rgba(0, 0, 0, 0.8);  /* Dark transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;        /* High z-index to appear above all content */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #000;
+  width: 90%;           /* Responsive width */
+  max-width: 800px;     /* Maximum width */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.9);
+  animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* Close Button */
+.close-btn {
+  background-color: #e50914; /* Netflix red for aesthetics */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  background-color: #f40612; /* Slightly brighter red */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* Iframe for YouTube Trailer */
+iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
